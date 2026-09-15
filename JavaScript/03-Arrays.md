@@ -95,3 +95,48 @@ numbers.concat([6, 7]);
 
 배열은 데이터를 여러 개 저장하고 관리할 때 사용한다.
 메서드마다 원본 배열을 변경하는지, 새로운 값을 반환하는지를 구분해서 사용하는 것이 중요하다.
+
+
+
+
+
+
+### 추가 메서드
+
+```js
+const fruits = ["apple", "banana", "grape"];
+
+fruits.join(", "); // "apple, banana, grape"
+```
+
+`join()`은 배열의 요소를 하나의 문자열로 합친다.
+
+```js
+const numbers = [3, 1, 2];
+
+numbers.sort((a, b) => a - b);
+```
+
+`sort()`는 배열을 정렬한다.
+
+```js
+const numbers = [10, 20, 30];
+
+for (const index in numbers) {
+  console.log(index);
+}
+```
+
+`for...in`은 배열의 인덱스를 순회할 때 사용할 수 있다.
+
+```js
+const numbers = [1, 2, 3, 4];
+
+numbers.findIndex((number) => number === 3);
+numbers.some((number) => number > 3);
+numbers.every((number) => number > 0);
+```
+
+* `findIndex()` : 조건에 맞는 첫 번째 요소의 인덱스를 반환한다.
+* `some()` : 조건을 만족하는 요소가 하나라도 있는지 확인한다.
+* `every()` : 모든 요소가 조건을 만족하는지 확인한다.
