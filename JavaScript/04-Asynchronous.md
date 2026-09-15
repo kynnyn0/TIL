@@ -58,6 +58,44 @@ console.log(data);
 
 `fetch()`의 결과는 `Response` 객체로 받고, `response.json()`을 통해 응답 데이터를 사용할 수 있는 형태로 변환한다.
 
+## JSON
+
+서버와 데이터를 주고받을 때 자주 사용하는 데이터 형식이다.
+
+JavaScript 객체를 JSON 문자열로 바꿀 때는 `JSON.stringify()`를 사용하고, JSON 문자열을 JavaScript 객체로 바꿀 때는 `JSON.parse()`를 사용한다.
+
+```js
+const data = {
+  name: "Yerin",
+  age: 16
+};
+
+const json = JSON.stringify(data);
+const object = JSON.parse(json);
+```
+
+## Query Parameter
+
+URL 뒤에 `?`를 붙여 서버에 추가적인 정보를 전달할 수 있다.
+
+```text
+https://example.com/users?page=2&name=Yerin
+```
+
+`page=2`, `name=Yerin`처럼 `key=value` 형태로 작성하고, 여러 값을 보낼 때는 `&`로 구분한다.
+
+JavaScript에서는 `URLSearchParams`를 사용해서 다룰 수도 있다.
+
+```js
+const params = new URLSearchParams({
+  page: 2,
+  name: "Yerin"
+});
+
+console.log(params.toString());
+```
+
+
 ## 5. HTTP 요청
 
 자주 사용하는 HTTP 메서드는 다음과 같다.
