@@ -88,7 +88,45 @@ for (const fruit of fruits) {
 }
 ```
 
-## 5. 정리
+## 5. Scope
+
+Scope는 변수를 사용할 수 있는 범위를 의미한다.
+
+```js
+let name = "Yerin";
+
+if (true) {
+  let age = 16;
+  console.log(age);
+}
+
+console.log(name);
+```
+
+`let`과 `const`로 선언한 변수는 선언된 블록 `{}` 안에서 사용할 수 있다.
+
+```js
+if (true) {
+  const message = "Hello";
+}
+
+console.log(message); // 오류
+```
+
+함수 안에서 선언한 변수도 함수 밖에서는 사용할 수 없다.
+
+```js
+function test() {
+  const value = 10;
+}
+
+console.log(value); // 오류
+```
+
+즉, 변수는 **어디에서 선언했는지에 따라 사용할 수 있는 범위가 달라진다.**
+
+
+## 6. 정리
 
 - `let`, `const`로 변수를 선언한다.
 - 자료형에 따라 저장되는 값의 형태가 다르다.
