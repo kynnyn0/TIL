@@ -37,6 +37,21 @@ const user = {
 };
 ```
 
+## null과 undefined
+
+둘 다 값이 없다는 의미로 사용되지만 상황이 다르다.
+
+- `undefined` : 값이 아직 할당되지 않은 상태
+- `null` : 개발자가 의도적으로 값이 없다고 지정한 상태
+
+```js
+let a;
+let b = null;
+
+console.log(a); // undefined
+console.log(b); // null
+```
+
 ## 3. 조건문
 
 조건에 따라 다른 코드를 실행할 때 사용한다.
