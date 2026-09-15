@@ -135,6 +135,38 @@ HTTP 상태 코드는 서버의 요청 결과를 나타낸다.
 * `4xx` : 클라이언트 오류
 * `5xx` : 서버 오류
 
+
+
+## 7. Error Handling
+
+JavaScript에서는 `try...catch`를 사용해서 오류를 처리할 수 있다.
+
+```js
+try {
+  const result = someFunction();
+} catch (error) {
+  console.log(error);
+}
+```
+
+`try`에서 오류가 발생하면 `catch`가 실행된다.
+
+직접 오류를 발생시키고 싶을 때는 `throw`를 사용할 수 있다.
+
+```js
+function checkAge(age) {
+  if (age < 0) {
+    throw new Error("나이는 0보다 작을 수 없다.");
+  }
+}
+```
+
+* `try` : 오류가 발생할 수 있는 코드
+* `catch` : 오류가 발생했을 때 실행
+* `throw` : 직접 오류를 발생시킴
+* `Error` : 오류 객체 생성
+
+
 ## 정리
 
 Promise를 이용해 비동기 작업을 처리할 수 있고, `async/await`를 사용하면 비동기 코드를 좀 더 쉽게 작성할 수 있다.
