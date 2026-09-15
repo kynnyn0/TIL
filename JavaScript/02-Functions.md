@@ -58,7 +58,34 @@ const add = (a, b) => {
 const add = (a, b) => a + b;
 ```
 
-## 5. 정리
+## 5. 콜백 함수
+
+콜백 함수는 **다른 함수의 매개변수로 전달되어 나중에 실행되는 함수**이다.
+
+```js
+function greet(callback) {
+  callback();
+}
+
+greet(() => {
+  console.log("Hello");
+});
+```
+
+`greet()`에 함수를 전달하고, `callback()`을 호출하면 전달한 함수가 실행된다.
+
+콜백 함수는 `forEach()`나 이벤트 처리 등에서 자주 사용된다.
+
+```js
+fruits.forEach((fruit) => {
+  console.log(fruit);
+});
+```
+
+여기서 `(fruit) => { ... }` 부분이 콜백 함수이다.
+
+
+## 6. 정리
 
 * 함수는 특정 작업을 묶어 재사용할 수 있다.
 * 매개변수를 통해 함수에 값을 전달할 수 있다.
